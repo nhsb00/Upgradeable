@@ -13,7 +13,7 @@ export const logout = () => {
     })
 };
 
-export const signin = user => {
+export const signup = user => {
     return $.ajax({
         url: '/api/user',
         method: 'POST',

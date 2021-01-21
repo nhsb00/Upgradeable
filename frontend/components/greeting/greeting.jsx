@@ -1,10 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const Greeting = ({ currenetUser, logout }) =>{
+const Greeting = ({ currentUser, logout }) =>{
     const loggedIn = () => (
         <div>
-            <h1>Welcome to Upgradeable, { currenetUser.username } !</h1>
+            <h1 className="header-name">Greeting, { currentUser.username } !</h1>
             <button onClick={logout}>Log Out</button>
         </div>
     );
@@ -12,11 +12,12 @@ const Greeting = ({ currenetUser, logout }) =>{
     const notLoggedIn = () => (
         <div>
             <Link to='/login'>Login</Link>
+            <br/>
             <Link to='/signup'>Sign Up</Link>
         </div>
     );
 
-    if (currenetUser) {
+    if (currentUser) {
         return loggedIn();
     } else {
         return notLoggedIn();

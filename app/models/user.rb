@@ -3,9 +3,9 @@ class User < ApplicationRecord
     validates :password_digest, presence: true
     validates :password, length: {minimum: 6, allow_nil: true}
 
-    has_many :projects,
-    foreign_key: :user_id,
-    class_name: :Project
+    # has_many :projects,
+    # foreign_key: :user_id,
+    # class_name: :Project
 
     after_initialize :ensure_session_token
 
@@ -20,8 +20,8 @@ class User < ApplicationRecord
         BCrypt::Password.new(self.password_digest).is_password?(password)
     end
 
-    def self.find_by_credentials(email, password)
-        user = User.find_by(email: email)
+    def self.find_by_credentials(username, password)
+        user = User.find_by(username: username)
         return user if user && user.is_password?(password)
     end
 

@@ -3,18 +3,27 @@ import { Link } from 'react-router-dom';
 
 const Greeting = ({ currentUser, logout }) =>{
     const loggedIn = () => (
-        <div>
-            <h1 className="header-name">Greeting, { currentUser.username } !</h1>
-            <button onClick={logout}>Log Out</button>
-        </div>
+        <nav className="header">
+            <h1 className="header-title">
+                <a href="/">Upgradeable</a>
+            </h1>
+            <div className="session-button">
+                <h2>Welcome back, { currentUser.username } !</h2>
+                <button onClick={logout}>Log Out</button>
+            </div>
+        </nav>
     );
 
     const notLoggedIn = () => (
-        <div>
-            <Link to='/login'>Login</Link>
-            <br/>
-            <Link to='/signup'>Sign Up</Link>
-        </div>
+        <nav className="header">
+            <h1 className="header-title">
+                <a href="/">Upgradeable</a>
+            </h1>
+            <div className="session-button">
+                <Link to='/login'>Login</Link>
+                <Link to='/signup'>Sign Up</Link>
+            </div>
+        </nav>
     );
 
     if (currentUser) {

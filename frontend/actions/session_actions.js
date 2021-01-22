@@ -37,3 +37,10 @@ export const logout = () => dispatch => {
     .then(user => (dispatch(logoutCurrentUser())
     ))
 };
+
+export const demologin = user => dispatch => {
+    return SessionAPIUtil.login(user)
+    .then(user => (dispatch(receiveCurrentUser(user))
+    ), error => (dispatch(receiveErrors(error.responseJSON))
+    ))
+};

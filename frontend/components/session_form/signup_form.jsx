@@ -1,6 +1,6 @@
 import React from 'react';
 
-class SessionForm extends React.Component {
+class SignUpForm extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -26,35 +26,50 @@ class SessionForm extends React.Component {
     render() {
         return (
             <div className="login-form-container">
-                <form className="login-form-box" onSubmit={this.handleSubmit}>
-                    Welcome to Upgradeable
-                        <br />
-                        Please {this.props.formType}
+                {/* <img className="login-img" src="https://i.ytimg.com/vi/Vsu20TNOI8Y/maxresdefault.jpg" alt="background" /> */}
+                <div className="empty-div"></div>
+                <form className="login-form-box">
+                    <p>Welcome to Upgradeable</p>
+                    <br />
+                    <br />
+                    <p>Please {this.props.formType}</p>
+                    <br />
                     <br />
                     <div className="login-form">
-                        <label>Username:
-                        <input type="text"
+                        <label>
+                        <input className="login-input"
+                                placeholder="Username"
+                                type="text"
                                 value={this.state.username}
                                 onChange={this.update('username')}
                             />
                         </label>
                         <br />
-                        <label>Email:
-                        <input type="text"
+                        <br />
+                        <label>
+                            <input className="login-input"
+                                placeholder="E-mail"
+                                type="text"
                                 value={this.state.email}
                                 onChange={this.update('email')}
                             />
                         </label>
                         <br />
-                        <label>Password:
-                        <input type="password"
+                        <br />
+                        <label>
+                        <input className="login-input"
+                                placeholder="Password"
+                                type="password"
                                 value={this.state.password}
                                 onChange={this.update('password')}
                             />
                         </label>
                         <br />
-                        <label>Country:
-                        <input type="text"
+                        <br />
+                        <label>
+                        <input className="login-input"
+                                placeholder="Country"
+                                type="text"
                                 value={this.state.country}
                                 onChange={this.update('country')}
                             />
@@ -64,6 +79,9 @@ class SessionForm extends React.Component {
                     </div>
                     <br />
                     <button className="login-button" type="submit" value={this.props.formType}>{this.props.formType}</button>
+                    <br />
+                    <br />
+                    <p>Already a member? {this.props.link}</p>
                 </form>
             </div>
         );
@@ -71,4 +89,4 @@ class SessionForm extends React.Component {
 
 };
 
-export default SessionForm;
+export default SignUpForm;

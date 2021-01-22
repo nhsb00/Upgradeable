@@ -7,9 +7,16 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-soobin = User.create!(
+test = User.create!(
     username: 'test',
     password: 'password',
     email: 'test@gmail.com',
+    country: 'United States'
+)
+
+soobin = User.create!(
+    username: 'soobin',
+    password: 'soobin',
+    email: 'soobin@gmail.com',
     country: 'United States'
 )

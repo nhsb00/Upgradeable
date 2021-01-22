@@ -62,7 +62,7 @@
 }
 
 .login-input::placeholder {
-    color: rgba(160, 160, 160);
+    color: rgb(160, 160, 160);
     font-size: 16px;
     line-height: 20px;
     height: auto;

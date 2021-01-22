@@ -16,12 +16,14 @@
     padding: 30px;
     margin: 40px;
 }
+
 .gradient {
      background: -webkit-linear-gradient(rgb(255, 255, 255), rgb(146, 146, 146));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-shadow: 1px 1px white;
 }
+
 .login-form-box > p {
     color: white;
     margin: 0 20px 0 20px;
@@ -62,7 +64,7 @@
 }
 
 .login-input::placeholder {
-    color: rgba(160, 160, 160);
+    color: rgb(160, 160, 160);
     font-size: 16px;
     line-height: 20px;
     height: auto;

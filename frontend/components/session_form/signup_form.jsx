@@ -26,13 +26,11 @@ class SignUpForm extends React.Component {
     render() {
         return (
             <div className="login-form-container">
-                {/* <img className="login-img" src="https://i.ytimg.com/vi/Vsu20TNOI8Y/maxresdefault.jpg" alt="background" /> */}
                 <div className="empty-div"></div>
                 <form className="login-form-box">
-                    <p>Welcome to Upgradeable</p>
+                    <p className="gradient">Welcome to Upgradeable</p>
                     <br />
-                    <br />
-                    <p>Please {this.props.formType}</p>
+                    <p className="gradient">Please {this.props.formType}</p>
                     <br />
                     <br />
                     <div className="login-form">
@@ -45,7 +43,6 @@ class SignUpForm extends React.Component {
                             />
                         </label>
                         <br />
-                        <br />
                         <label>
                             <input className="login-input"
                                 placeholder="E-mail"
@@ -54,7 +51,6 @@ class SignUpForm extends React.Component {
                                 onChange={this.update('email')}
                             />
                         </label>
-                        <br />
                         <br />
                         <label>
                         <input className="login-input"
@@ -65,7 +61,6 @@ class SignUpForm extends React.Component {
                             />
                         </label>
                         <br />
-                        <br />
                         <label>
                         <input className="login-input"
                                 placeholder="Country"
@@ -74,14 +69,12 @@ class SignUpForm extends React.Component {
                                 onChange={this.update('country')}
                             />
                         </label>
-                        <br />
-
                     </div>
+                    <button className="login-button" type="submit" value={this.props.formType}>Sign Me Up !</button>
                     <br />
-                    <button className="login-button" type="submit" value={this.props.formType}>{this.props.formType}</button>
-                    <br />
-                    <br />
-                    <p>Already a member? {this.props.link}</p>
+                    <p>
+                        <span>Already a member? {this.props.link}</span>
+                    </p>
                 </form>
             </div>
         );

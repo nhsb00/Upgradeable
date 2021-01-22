@@ -1,31 +1,39 @@
 body {
   font-family: 'Hachi Maru Pop', cursive;
-  background-image: image-url("background.jpg");
-   background-color: white;
-   width: 100%;
-   height: 100%;
+  background-image: image-url("back1.jpg");
+  background-color: white;
+  width: 100%;
+  height: 100%;
+}
+
+a {
+  top: -4px;
+  color: black;
+  text-decoration: none;
+  align-items: center;
+  position: relative;
 }
 
 .header {
     display: flex;
     width: 100%;
-    background-color: lightgray;
+    background-color:#eee;
     justify-content: space-between;
-    height: 89px;
+    height: 86px;
     align-items: center;
+    position: relative;
 }
 
 .header-title {
-
     font-size: 20px;
     font-weight: bold;
     margin-left: 40px;
 }
 
 .session-button {
-  margin-right: 40px;
-  width: 100px;
-  display: block;
+  margin-right: 20px;
+  width: 110px;
+  display: flex;
   justify-content: space-between;
   font-size: 15px;
   color: darkgray;
@@ -33,11 +41,12 @@ body {
 }
 
 .session-logout-button {
-  margin-right: 40px;
-  width: 180px;
-  display: block;
+  margin-right: 20px;
+  width: 200px;
+  display: flex;
   justify-content: space-between;
   font-size: 15px;
   color: darkgray;
   align-items: center;
+  text-transform: capitalize;
 }

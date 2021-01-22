@@ -20,7 +20,7 @@ const Greeting = ({ currentUser, logout }) =>{
                 <a href="/">Upgradeable</a>
             </h1>
             <div className="session-button">
-                <Link to='/login'>Login</Link>
+                <Link to='/login'>Log In</Link>
                 <Link to='/signup'>Sign Up</Link>
             </div>
         </nav>

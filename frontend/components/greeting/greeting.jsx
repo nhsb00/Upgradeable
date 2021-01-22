@@ -7,8 +7,8 @@ const Greeting = ({ currentUser, logout }) =>{
             <h1 className="header-title">
                 <a href="/">Upgradeable</a>
             </h1>
-            <div className="session-button">
-                <h2>Welcome back, { currentUser.username } !</h2>
+            <div className="session-logout-button">
+                <h2>Welcome, { currentUser.username } !</h2>
                 <button onClick={logout}>Log Out</button>
             </div>
         </nav>

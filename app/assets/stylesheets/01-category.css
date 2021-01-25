@@ -1,0 +1,50 @@
+.main-head {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    height: 38px;
+    align-items: center;
+    position: relative;
+    background: #555;
+}
+
+.btn {
+  background-color: #555; 
+  border: none; /* Remove borders */
+  color: white; /* White text */
+  font-size: 15px; /* Set a font size */
+  cursor: pointer; /* Mouse pointer on hover */
+}
+
+.main-button {
+ margin-right: 12px;
+  width: 110px;
+  color: white;
+  display: flex;
+  font-size: 12px;
+  align-items: center;
+}
+
+.main-button > a {
+    top: 0.5px;
+    float: right;
+    color: white;
+}
+.main-button :first-child {
+    border-right: 1px solid white;
+    padding-right: 10px;
+}
+.main-button :last-child {
+    padding-left: 10px;
+}
+
+.main-logout-button {
+  margin-right: 12px;
+  width: 200px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 15px;
+  color: darkgray;
+  align-items: center;
+  text-transform: capitalize;
+}

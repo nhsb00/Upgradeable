@@ -62,12 +62,16 @@ class SignUpForm extends React.Component {
                         </label>
                         <br />
                         <label>
-                        <input className="login-input"
-                                placeholder="Country"
-                                type="text"
-                                value={this.state.country}
-                                onChange={this.update('country')}
-                            />
+                                <input className="login-input"
+                                    placeholder="Country"
+                                    type="country"
+                                    value={this.state.country}
+                                    onChange={this.update('country')}
+                                />
+                            {/* <select className="login-input" >
+                                <option value="United States">United States</option>
+                                <option value="Republic of Korea">South Korea</option>
+                            </select> */}
                         </label>
                     </div>
                     <button className="login-button" type="submit" value={this.props.formType}>Sign Me Up !</button>

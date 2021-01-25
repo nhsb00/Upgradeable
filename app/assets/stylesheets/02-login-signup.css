@@ -12,7 +12,7 @@
 
 .login-form-box {
     position: absolute;
-    top: 180px ;
+    top: 220px ;
     padding: 30px;
     margin: 40px;
 }
@@ -42,11 +42,11 @@
 
 .empty-div {
     position: absolute;
-    top: 32px;
+    top: 76px;
     margin: 50px;
     width: 402px;
     height: 100%;
-    background: white;
+    background: black;
     opacity: 0.2;
 }
 

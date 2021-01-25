@@ -25,19 +25,23 @@ class TitleForm extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className="titleform">
                 <div>
                     I made a project called:
                 </div>
                 <form onSubmit={this.handleSubmit}>
                     <input type="text" 
+                        placeholder="add title"
                         value={this.props.title}
                         onChange={this.update('title')}
                         />
+                        <br/>
                     <textarea
+                        placeholder="add description"
                         value={this.props.body}
                         onChange={this.update('body')}
                     />
+                    <br />
                     <button>Start Upgradeable</button>
                 </form>
             </div>

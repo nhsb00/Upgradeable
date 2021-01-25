@@ -4,8 +4,9 @@ import { AuthRoute } from '../util/route_util';
 
 import Modal from './modal/modal';
 import CategoryContainer from "./category/category_container";
-import GreetingContainer from './greeting/greeting_container'
-import HeaderContainer from './header/header_container'
+import GreetingContainer from './greeting/greeting_container';
+import HeaderContainer from './header/header_container';
+import SplashContainer from './splash/splash_container';
 import LogInFormContainer from './session_form/login_form_container';
 import SignUpFormContainer from './session_form/signup_form_container';
 import ProjectIndexContainer from './projects/project_index_container';
@@ -22,6 +23,7 @@ const App = () => (
             <HeaderContainer />
         </header>
         <Switch>
+            <Route exact path='/' component={SplashContainer} />
             <AuthRoute exact path="/login" component={LogInFormContainer}/>
             <AuthRoute exact path="/signup" component={SignUpFormContainer} />
             <Route exact path='/projects' component={ProjectIndexContainer} />

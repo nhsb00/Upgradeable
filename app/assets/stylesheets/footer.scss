@@ -1,0 +1,42 @@
+.footer {
+    // display: flex;
+    // align-items: center;
+    background: #555;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 200px;
+    padding: 10px;
+    color: white;
+}
+
+.footer-list {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 60px;
+}
+
+.footer-contact > h1 {
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.footer-contact > h3 {
+    color: gray;
+    margin-bottom: 5px;
+}
+
+.footer-contact > li {
+    color: gray;
+}
+
+.footer-link > h1 {
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+.footer-link > a {
+     color: gray;
+    margin-bottom: 10px;
+}

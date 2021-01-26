@@ -80,7 +80,7 @@ class LogInForm extends React.Component {
                         </div>            
                             <button className="login-button" type="submit" onClick={this.handleSubmit} value={this.props.formType}>Log In</button>
                         <br />
-                            <button className="login-button" type="submit" onClick={this.handleDemoSubmit}>Demo LogIn</button>
+                            <button className="login-button" type="submit" onClick={this.handleDemoSubmit}>Demo Login</button>
                         <br />
                         <p>
                             <span>New to Upgradeable? {this.props.link}</span>

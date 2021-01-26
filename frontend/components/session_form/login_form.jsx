@@ -39,7 +39,7 @@ class LogInForm extends React.Component {
         return (
             <>
                 {this.props.errors.map((error, i) => (
-                    <p className="error" key={i}>{ error }</p>
+                    <ul className="error" key={i}>{error}</ul>
                 ))}
             </>
         )
@@ -57,8 +57,8 @@ class LogInForm extends React.Component {
                         <p className="gradient">Please {this.props.formType}</p>
                         <br />
                         <br />
-                        <div className="login-form">
                             {this.renderError()}
+                        <div className="login-form">
                             <label> 
                                 <input className="login-input"
                                     placeholder="Username"

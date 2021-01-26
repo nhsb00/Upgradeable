@@ -16,10 +16,11 @@ class Header extends React.Component {
         return (
         <nav className="header">
             <h1 className="header-title">
-                <a href="/">Upgradeable</a>
+                <img id="instructables-logo" alt="Instructables" src="https://www.instructables.com/assets/img/instructables-logo-v2.png"></img>
+                <a href="/">Upgradeables</a>
+                <a href="./projects"><button className="header-title-button">Projects</button></a>
             </h1>
             <div>
-                <button>Projects</button>
             </div>
         </nav>
         )

@@ -1,8 +1,21 @@
+.login-background {
+    background-image: image-url("back1.jpg");
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+}
+
+.signup-background {
+    background-image: image-url("back3.jpg");
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+}
 
 .login-form-container {
     display: flex;    
     width: 100%;
-    height: 700px;
+    height: 800px;
 }
 
 .login-img {
@@ -53,6 +66,7 @@
 
 .login-form {
     width: 338px;
+    position: relative;
 }
 
 .login-input {
@@ -86,16 +100,12 @@
 }
 
 .error {
-    // position: absolute;
-    margin-left: 45%;
-    margin-bottom: 10px;
     background-color: #b94a48;
     color: white;
-    font-size: 13px;
+    font-size: 14px;
     z-index: 1;
     border-radius: 3px;
-    width: 150px;
-    height: 30px;
     padding: 5px;
     justify-content: center;
+    margin-bottom: 5px;
 }

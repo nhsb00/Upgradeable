@@ -16,7 +16,6 @@ class ProjectIndex extends React.Component {
             <div>
                 <ul>
                     <br/>
-                    <p>Projectindexitem</p>
                     <br/>
                     {
                         projects.map(project => (

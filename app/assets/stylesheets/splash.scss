@@ -1,7 +1,7 @@
 .splash {
-    color:black;
+    color:white;
     height: 1100px;
-    font-family: Myriad Pro Light
+    font-family: 'Myriad Pro Light'
 }
 
 .splash-image {
@@ -45,16 +45,17 @@
     color: black;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
     margin-left: 100px;
     margin-right: 100px;
+    border-bottom: 1px solid lightgray;
 }
 
 .text > div {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    width: 284px;
+    width: 30%;
     height: 280;
     padding-bottom: 40px;
 }

@@ -14,6 +14,10 @@ class LogInForm extends React.Component {
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleDemoSubmit = this.handleDemoSubmit.bind(this);
     }
+    
+    componentWillUnmount() {
+        this.props.receiveErrors([]);
+    }
 
     update(field) {
         return e => this.setState({ [field]: e.currentTarget.value })
@@ -31,12 +35,23 @@ class LogInForm extends React.Component {
         this.props.demologin(user);
     }
 
+    renderError() {
+        return (
+            <div>
+                {this.props.errors.map((error, i) => (
+                    <li key={i}>{ error }</li>
+                ))}
+            </div>
+        )
+    };
+
     render() {
         return (
             <div className="login-background">            
                 <div className="login-form-container">
                         <div className="empty-div"></div>
                     <form className="login-form-box">
+                      
                         <p className="gradient">Welcome to Upgradeable</p>
                         <br />                    
                         <p className="gradient">Please {this.props.formType}</p>
@@ -69,6 +84,7 @@ class LogInForm extends React.Component {
                         <p>
                             <span>New to Upgradeable? {this.props.link}</span>
                         </p>
+                        {this.renderError()}
                     </form>
                     
                 </div>

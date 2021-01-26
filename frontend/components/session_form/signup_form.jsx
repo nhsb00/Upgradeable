@@ -1,5 +1,6 @@
 import React from 'react';
 
+
 class SignUpForm extends React.Component {
     constructor(props) {
         super(props);
@@ -9,10 +10,14 @@ class SignUpForm extends React.Component {
             password: '',
             country: ''
         };
-
+        
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
+    componentWillUnmount() {
+        this.props.receiveErrors([]);
+    }
+    
     update(field) {
         return e => this.setState({ [field]: e.currentTarget.value })
     };
@@ -24,11 +29,22 @@ class SignUpForm extends React.Component {
             .then(() => this.props.history.push('/'));
     }
 
+    renderError() {
+        return (
+            <div className="error"> 
+                {this.props.errors.map((error, i) => (
+                    <li key={i}>{ error }</li>
+                ))}
+            </div>
+        )
+    };
+
     render() {
         return (
             <div className="login-form-container">
                 <div className="empty-div"></div>
                 <form className="login-form-box" onSubmit={this.handleSubmit}>
+                   
                     <p className="gradient">Welcome to Upgradeable</p>
                     <br />
                     <p className="gradient">Please {this.props.formType}</p>
@@ -76,6 +92,7 @@ class SignUpForm extends React.Component {
                     <p>
                         <span>Already a member? {this.props.link}</span>
                     </p>
+                    {this.renderError()}
                 </form>
             </div>
         );

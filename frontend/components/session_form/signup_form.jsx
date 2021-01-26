@@ -31,11 +31,11 @@ class SignUpForm extends React.Component {
 
     renderError() {
         return (
-            <div className="error"> 
+            <>
                 {this.props.errors.map((error, i) => (
-                    <li key={i}>{ error }</li>
+                    <ul className="error" key={i}>{error}</ul>
                 ))}
-            </div>
+            </>
         )
     };
 
@@ -44,14 +44,13 @@ class SignUpForm extends React.Component {
             <div className="login-form-container">
                 <div className="empty-div"></div>
                 <form className="login-form-box" onSubmit={this.handleSubmit}>
-                   
                     <p className="gradient">Welcome to Upgradeable</p>
                     <br />
                     <p className="gradient">Please {this.props.formType}</p>
                     <br />
                     <br />
                     <div className="login-form">
-                        <label>
+                        <label> {this.renderError()}
                         <input className="login-input"
                                 placeholder="Username"
                                 type="text"
@@ -69,7 +68,7 @@ class SignUpForm extends React.Component {
                             />
                         </label>
                         <br />
-                        <label>
+                        <label> 
                         <input className="login-input"
                                 placeholder="Password"
                                 type="password"
@@ -92,7 +91,6 @@ class SignUpForm extends React.Component {
                     <p>
                         <span>Already a member? {this.props.link}</span>
                     </p>
-                    {this.renderError()}
                 </form>
             </div>
         );

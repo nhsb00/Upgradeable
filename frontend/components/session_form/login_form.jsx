@@ -37,11 +37,11 @@ class LogInForm extends React.Component {
 
     renderError() {
         return (
-            <div>
+            <>
                 {this.props.errors.map((error, i) => (
-                    <li key={i}>{ error }</li>
+                    <p className="error" key={i}>{ error }</p>
                 ))}
-            </div>
+            </>
         )
     };
 
@@ -58,7 +58,8 @@ class LogInForm extends React.Component {
                         <br />
                         <br />
                         <div className="login-form">
-                            <label>
+                            {this.renderError()}
+                            <label> 
                                 <input className="login-input"
                                     placeholder="Username"
                                     type="text"
@@ -84,7 +85,7 @@ class LogInForm extends React.Component {
                         <p>
                             <span>New to Upgradeable? {this.props.link}</span>
                         </p>
-                        {this.renderError()}
+                        
                     </form>
                     
                 </div>

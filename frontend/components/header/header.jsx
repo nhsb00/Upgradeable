@@ -19,10 +19,7 @@ class Header extends React.Component {
                 <a href="/">Upgradeable</a>
             </h1>
             <div>
-                <button>View All Projects</button>
-            </div>
-            <div>
-                <button onClick={this.handleSubmit}>New Project</button>
+                <button>Projects</button>
             </div>
         </nav>
         )

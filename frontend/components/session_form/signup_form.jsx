@@ -20,14 +20,15 @@ class SignUpForm extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
         const user = Object.assign({}, this.state);
-        this.props.processForm(user);
+        this.props.processForm(user)
+            .then(() => this.props.history.push('/'));
     }
 
     render() {
         return (
             <div className="login-form-container">
                 <div className="empty-div"></div>
-                <form className="login-form-box">
+                <form className="login-form-box" onSubmit={this.handleSubmit}>
                     <p className="gradient">Welcome to Upgradeable</p>
                     <br />
                     <p className="gradient">Please {this.props.formType}</p>
@@ -68,10 +69,6 @@ class SignUpForm extends React.Component {
                                     value={this.state.country}
                                     onChange={this.update('country')}
                                 />
-                            {/* <select className="login-input" >
-                                <option value="United States">United States</option>
-                                <option value="Republic of Korea">South Korea</option>
-                            </select> */}
                         </label>
                     </div>
                     <button className="login-button" type="submit" value={this.props.formType}>Sign Me Up !</button>

@@ -17,7 +17,7 @@
 }
 
 .main-button {
- margin-right: 12px;
+  margin-right: 12px;
   width: 110px;
   color: white;
   display: flex;
@@ -39,12 +39,12 @@
 }
 
 .main-logout-button {
-  margin-right: 12px;
-  width: 200px;
+  top: 0;
   display: flex;
   justify-content: space-between;
   font-size: 15px;
   color: darkgray;
   align-items: center;
   text-transform: capitalize;
+  padding-right: 15px;
 }

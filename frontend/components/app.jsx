@@ -22,16 +22,20 @@ const App = () => (
             <CategoryContainer />
             <HeaderContainer />
         </header>
-        <Switch>
-            <Route exact path='/' component={SplashContainer} />
-            <AuthRoute exact path="/login" component={LogInFormContainer}/>
-            <AuthRoute exact path="/signup" component={SignUpFormContainer} />
-            <Route exact path='/projects' component={ProjectIndexContainer} />
-            <Route exact path='/projects/:id' component={ProjectShowContainer} />
-            <Route exact path='/projects/new' component={CreateProjectFormContainer} />
-            <Route exact path='/projects/:id/edit' component={EditProjectFormContainer} />
-        </Switch>    
-        <Footer />
+        <div className="container">
+            <Switch>
+                <Route exact path='/' component={SplashContainer} />
+                <AuthRoute exact path="/login" component={LogInFormContainer}/>
+                <AuthRoute exact path="/signup" component={SignUpFormContainer} />
+                <Route exact path='/projects' component={ProjectIndexContainer} />
+                <Route exact path='/projects/:id' component={ProjectShowContainer} />
+                <Route exact path='/projects/new' component={CreateProjectFormContainer} />
+                <Route exact path='/projects/:id/edit' component={EditProjectFormContainer} />
+            </Switch>    
+        </div>
+        <footer>
+            <Footer />
+        </footer>
     </div>
 );
 

@@ -1,0 +1,71 @@
+.user-icon:hover {
+    cursor: pointer;
+}
+
+.user-dropdown {
+    display: block;
+    border-radius: 14px;
+    height: 28px;
+    width: 28px;
+    position: relative;
+    margin-right: 6px;
+}
+
+.hide {
+    display: none;
+    position: absolute;
+}
+
+.show {
+    display: block;
+    position: absolute;
+    z-index: 1;
+    top: 36px;
+    right: 15px;
+    width: 298px;
+    height: 293px;
+    background-color: white;
+    border: 1px solid rgba(0,0,0,.2);
+    border-radius: 6px;
+    text-align: center;
+}
+
+.logout {
+    margin: 10px;
+}
+
+.logout-button {
+    float: right;
+    width: 92px;
+    height: 34px;
+    top: 11px;
+    right: 11px;
+    background-color: #f6f6f6;
+    border: 1px solid #dedede;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 400;
+    padding: 6px 12px;
+    text-align: center;
+}
+
+.new-upgradeable {
+    
+}
+
+.new-upgradeable-button {
+    margin-bottom: 20px;
+    text-transform: capitalize;
+    background:coral;
+    font-size: 17.5px;
+    color: white;
+    text-align: center;
+    width: 268px;
+    height: 44px;
+    padding: auto;
+    border: 1px solid lightcoral;
+    border-radius: 6px;
+    bottom: 0;
+    margin-top: 184px;
+}

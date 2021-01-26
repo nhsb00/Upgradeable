@@ -15,6 +15,9 @@ class ProjectIndex extends React.Component {
         return (
             <div>
                 <ul>
+                    <br/>
+                    <p>Projectindexitem</p>
+                    <br/>
                     {
                         projects.map(project => (
                             <ProjectIndexItem

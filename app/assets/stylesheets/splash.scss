@@ -1,3 +1,71 @@
 .splash {
-    color: white;
+    color:black;
+    height: 1100px;
+    font-family: Myriad Pro Light
+}
+
+.splash-image {
+    width: 100%;
+    height: 400px;
+    background-image: url(https://content.instructables.com/ORIG/FK3/R5LK/K3NKP5Q1/FK3R5LKK3NKP5Q1.jpg?auto=webp&amp;width=1600);
+    background-size: cover;
+    background-position: bottom;
+    background-position: center; 
+    position: relative;
+}
+
+.splash-text {
+    position: absolute;
+    width: 520px;
+    height: 153px;
+    margin: 98px auto 0 135px;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    padding: 25px 0;
+}
+
+.splash-text > h1 {
+    display: flex;
+    text-transform: uppercase;
+    height: 76px;
+    margin: 10px 0 15px 0;
+    font-size: 50px;
+    font-weight: 700;
+}
+
+.splash-text > p {
+    display: flex;
+    height: 52px;
+    margin-bottom: 0px;
+    font-size: 18px;
+}
+
+.text {
+    margin-top: 58px;
+    color: black;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.text > div {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 284px;
+    height: 280;
+    padding-bottom: 40px;
+}
+
+.text > div > h2 {
+    font-size: 34px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.text > div > p {
+    font-size: 18px;
+   
 }

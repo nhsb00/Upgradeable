@@ -5,5 +5,8 @@ class Project < ApplicationRecord
         foreign_key: :user_id,
         class_name: :User
 
+    has_many :steps,
+    foreign_key: :project_id,
+    class_name: :Step
     
 end

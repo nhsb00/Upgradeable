@@ -7,7 +7,6 @@ class ProjectIndex extends React.Component {
         super(props)
     }
     componentDidMount() {
-        debugger
         this.props.fetchAllProjects();
     }
 
@@ -16,8 +15,6 @@ class ProjectIndex extends React.Component {
         return (
             <div>
                 <ul>
-                    <br/>
-                    <br/>
                     {
                         projects.map(project => (
                             <ProjectIndexItem
@@ -28,9 +25,7 @@ class ProjectIndex extends React.Component {
                         ))
                     }
                 </ul>
-                
             </div>
-
         );
 
     }

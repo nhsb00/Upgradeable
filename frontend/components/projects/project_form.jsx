@@ -1,4 +1,7 @@
 import React from 'react';
+import { withRouter } from 'react-router-dom'
+import StepIndexContainer from '../steps/step_index_container';
+import AddStepContainer from '../steps/add_step_container';
 
 class ProjectForm extends React.Component {
     constructor(props) {
@@ -6,42 +9,25 @@ class ProjectForm extends React.Component {
         this.state = this.props.project;
 
         this.handleSubmit = this.handleSubmit.bind(this);
-    }
-
-    componentDidMount() {
-        debugger
-        this.props.fetchProject(this.props.match.params.projectId);
+        this.handleDelete = this.handleDelete.bind(this);
     }
 
     handleSubmit(e) {
         e.preventDefault();
-        debugger
-        this.props.updateProject(project)
-            .then((project) => {this.props.history.push(`/projects/${project.project.id}`)});
+        this.props.updateProject(this.state)
+            .then((project) => {this.props.history.push(`/projects/${project.id}`)});
     }
 
     handleDelete(e) {
         e.preventDefault();
-        debugger
-        this.props.deleteProject()
+        this.props.deleteProject(this.props.match.params.id)
             .then(() => { this.props.history.push(`/`) });
     }
 
     update(field) {
         return e => this.setState({ [field]: e.currentTarget.value })
-    
     }
-    // renderError() {
-    //     debugger
-    //     return (
-    //         <>
-    //             {this.props.errors.map((error, i) => (
-    //                 <ul className="error" key={i}>{error}</ul>
-    //             ))}
-    //         </>
-    //     )
-    // };
-
+    
     render() {
         return (
             <div className="project-main">
@@ -53,28 +39,40 @@ class ProjectForm extends React.Component {
 
                 <div className="project-edit">
                     <button className="project-button" onClick={this.handleDelete}>Delete</button>
-                    <button className="project-button" onClick={this.handlesubmit}>
-                    Publish
-                    </button>
+                    <button className="project-button" onClick={this.handleSubmit}>Publish</button>
                 </div>
 
                 <div className="project-description">
                     <textarea
                         placeholder="description"
-                        value={this.props.project.body}
+                        value={this.state.body}
                         onChange={this.update('body')}></textarea>
                 </div>
 
                 <div className="project-step">
-                    <div>Step Container</div>
-                        <div className="add-step">Add Step Container</div>
+                    <div>
+                        <StepIndexContainer />
+                    </div>
+                    <div className="add-step">
+                        <AddStepContainer />
+                    </div>
                 </div>
 
-            </div>
+            </div> 
         )
     }
     
-   
+    // renderError() {
+    //     debugger
+    //     return (
+    //         <>
+    //             {this.props.errors.map((error, i) => (
+    //                 <ul className="error" key={i}>{error}</ul>
+    //             ))}
+    //         </>
+    //     )
+    // };
+    
 }
 
-export default ProjectForm;
+export default withRouter(ProjectForm);

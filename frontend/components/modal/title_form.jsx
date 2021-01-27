@@ -17,7 +17,7 @@ class TitleForm extends React.Component {
         let project = Object.assign({}, this.state)
         this.props.createProject(project)
             .then(project => {
-                 this.props.history.push(`/projects/${project.project.id}/edit`)
+                 this.props.history.push(`/projects/${project.id}/edit`)
                 })
             .then(() => this.props.closeModal());
     }

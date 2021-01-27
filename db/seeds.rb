@@ -20,3 +20,9 @@ soobin = User.create!(
     email: 'soobin@gmail.com',
     country: 'United States'
 )
+
+dalgona_coffee = Project.create!(
+    user_id: soobin.id, 
+    title: 'DIY Dalgona Coffee',
+    body: 'Dalgona coffee—it started during COIVD-19 as a Tik Tok trend and has now exploded all over the internet as the It-Drink of the moment.'
+)

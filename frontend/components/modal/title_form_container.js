@@ -4,13 +4,15 @@ import { closeModal } from '../../actions/modal_actions';
 import { createProject } from '../../actions/project_actions';
 import { withRouter } from 'react-router-dom';
 
-const mapStateToProps = ( state ) => {
+const mapStateToProps = ( state, ownProps ) => {
     return {
         project: {
             title: '',
             body: ''
         },
         formType: 'Publish Upgradeable',
+        errors: state.errors.project,
+        history: ownProps.history
     }
 };
 

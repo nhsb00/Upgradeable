@@ -18,12 +18,13 @@ a {
      -webkit-box-align: center;
      align-items: center;
      background-color: #eee;
-     padding: 8px 20px;
+     padding: 8px 0;
 }
 
 .header-title {
    display: flex;
-     align-items: center;
+    align-items: center;
+    margin-left: 20px;
    
 }
 

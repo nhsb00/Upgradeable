@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import TitleFormContainer from '../modal/title_forml_container';
+import TitleFormContainer from '../modal/title_form_container';
 
 const Greeting = ({ currentUser, logout }) =>{
     const loggedIn = () => (

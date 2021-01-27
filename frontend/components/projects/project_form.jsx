@@ -8,39 +8,73 @@ class ProjectForm extends React.Component {
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
+    componentDidMount() {
+        debugger
+        this.props.fetchProject(this.props.match.params.projectId);
+    }
+
     handleSubmit(e) {
         e.preventDefault();
-        this.props.createProject(this.state);
+        debugger
+        this.props.updateProject(project)
+            .then((project) => {this.props.history.push(`/projects/${project.project.id}`)});
+    }
+
+    handleDelete(e) {
+        e.preventDefault();
+        debugger
+        this.props.deleteProject()
+            .then(() => { this.props.history.push(`/`) });
     }
 
     update(field) {
         return e => this.setState({ [field]: e.currentTarget.value })
+    
     }
+    // renderError() {
+    //     debugger
+    //     return (
+    //         <>
+    //             {this.props.errors.map((error, i) => (
+    //                 <ul className="error" key={i}>{error}</ul>
+    //             ))}
+    //         </>
+    //     )
+    // };
 
     render() {
-        const { project } = this.props;
         return (
-            <div>
-                <div>title</div>
-                <br/>
-                <h1>{ this.props.project.title }</h1>
-                <br />
-                <div>image</div>
-                <br />
-                <div>Project Description</div>
-                <br />
-                <textarea placeholder="Add description for your project" 
-                            value={this.state.body}
-                            onChange={this.update('body')}></textarea>
-                <br />
-                <div>Step</div>
-                <br />
-                <div>AddStep</div>
-                <br />
-                <button onClick={this.handleSubmit}>Submit</button>
+            <div className="project-main">
+                <div className="project-title">{ this.props.project.title }</div>
+                
+                <div className="project-image-holder">
+                    <div className="project-image">Image Box</div>    
+                </div>
+
+                <div className="project-edit">
+                    <button className="project-button" onClick={this.handleDelete}>Delete</button>
+                    <button className="project-button" onClick={this.handlesubmit}>
+                    Publish
+                    </button>
+                </div>
+
+                <div className="project-description">
+                    <textarea
+                        placeholder="description"
+                        value={this.props.project.body}
+                        onChange={this.update('body')}></textarea>
+                </div>
+
+                <div className="project-step">
+                    <div>Step Container</div>
+                        <div className="add-step">Add Step Container</div>
+                </div>
+
             </div>
         )
     }
+    
+   
 }
 
 export default ProjectForm;

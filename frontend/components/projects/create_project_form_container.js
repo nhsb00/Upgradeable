@@ -1,7 +1,7 @@
 import {connect} from 'react-redux';
 import { openModal } from '../../actions/modal_actions';
 import ProjectForm from './project_form';
-import { createProject } from '../../actions/project_actions';
+import { fetchProject, createProject } from '../../actions/project_actions';
 
 const mapStateToProps = state => {
     return {

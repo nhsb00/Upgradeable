@@ -3,10 +3,7 @@ import React from 'react';
 class TitleForm extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {
-            title: '',
-            body: ''
-        };
+        this.state = this.props.project;
 
         this.handleSubmit = this.handleSubmit.bind(this);
     }
@@ -19,31 +16,34 @@ class TitleForm extends React.Component {
         e.preventDefault();
         let project = Object.assign({}, this.state)
         this.props.createProject(project)
-            .then(project => { this.props.history.push(`/projects/${project.id}/edit`)})
+            .then(project => {
+                 this.props.history.push(`/projects/${project.project.id}/edit`)
+                })
             .then(() => this.props.closeModal());
     }
 
     render() {
         return (
-            <div className="titleform">
-                <div>
-                    I made a project called:
+            <div>
+            <div className="titleform-image"></div>
+                <div className="titleform">
+                    <div className="titleform-text">I made a project called:</div>
+                    
+                        <form className="titleform-form" onSubmit={this.handleSubmit}>
+                        <input className="titleform-input"
+                                type="text"
+                                value={this.state.title}
+                                onChange={this.update('title')}
+                                />
+                            <textarea
+                                className='titleform-textarea'
+                                value={this.state.body}
+                                onChange={this.update('body')}
+                            />
+                        <button className="titleform-submit">Start Upgradeable</button>
+                        </form>
+                    
                 </div>
-                <form onSubmit={this.handleSubmit}>
-                    <input type="text" 
-                        placeholder="add title"
-                        value={this.props.title}
-                        onChange={this.update('title')}
-                        />
-                        <br/>
-                    <textarea
-                        placeholder="add description"
-                        value={this.props.body}
-                        onChange={this.update('body')}
-                    />
-                    <br />
-                    <button>Start Upgradeable</button>
-                </form>
             </div>
         );
     }

@@ -7,9 +7,8 @@ const Category = ({ currentUser, logout }) => {
         <nav className="main-head">
             <Link to="/"><button className="btn"><i className="fa fa-home">Home</i></button></Link>
             <div className="main-logout-button">
-                {/* <h2>Welcome, {currentUser.username} !</h2> */}
-                <DropdownContainer />
-                {/* <button onClick={logout}>Log Out</button> */}
+            <div className="current-username">Welcome, {currentUser.username} !</div>
+                <DropdownContainer /> 
             </div>
         </nav>
     );

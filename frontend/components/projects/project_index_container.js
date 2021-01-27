@@ -9,6 +9,7 @@ const mSTP = state => ({
 
 const mDTP = dispatch => ({
     fetchAllProjects: () => dispatch(fetchAllProjects()),
+    deleteProject: () => dispatch(deleteProject())
 });
 
 export default connect(mSTP, mDTP)(ProjectIndex);

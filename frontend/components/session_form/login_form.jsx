@@ -31,7 +31,7 @@ class LogInForm extends React.Component {
 
     handleDemoSubmit(e) {
         e.preventDefault();
-        const user = { username: 'test', password: 'password', email: 'test@gmail.com', country: 'United States'}
+        const user = { username: 'soobin', password: 'soobin', email: 'soobin@gmail.com', country: 'United States'}
         this.props.demologin(user);
     }
 
@@ -51,7 +51,6 @@ class LogInForm extends React.Component {
                 <div className="login-form-container">
                         <div className="empty-div"></div>
                     <form className="login-form-box">
-                      
                         <p className="gradient">Welcome to Upgradeable</p>
                         <br />                    
                         <p className="gradient">Please {this.props.formType}</p>

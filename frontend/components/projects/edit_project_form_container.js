@@ -1,16 +1,13 @@
 import { connect } from 'react-redux';
 import { openModal } from '../../actions/modal_actions';
 import ProjectForm from './project_form';
-import { updateProject } from '../../actions/project_actions';
-import { fetchProject } from '../../util/project_api_util';
+import { fetchProject, updateProject, deleteProject } from '../../actions/project_actions';
 
-const mapStateToProps = state => {
+const mapStateToProps = (state, ownProps) => {
     return {
-        project: {
-            title: '',
-            body: ''
-        },
-        formType: 'Publish Upgradeable'
+        project: state.entities.projects[ownProps.match.params.id],
+        errors: state.errors.project,
+        history: ownProps.history
     }
 };
 
@@ -18,7 +15,8 @@ const mapDispatchToProps = dispatch => {
     return {
         openeModal: () => dispatch(openModal()),
         fetchProject: projectId => dispatch(fetchProject(projectId)),
-        createProject: project => dispatch(updateProject(project))
+        updateProject: project => dispatch(updateProject(project)),
+        deleteProject: () => dispatch(deleteProject())
     };
 };
 

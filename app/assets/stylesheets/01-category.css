@@ -48,3 +48,9 @@
   text-transform: capitalize;
   padding-right: 15px;
 }
+
+.current-username {
+  
+  padding-right: 20px;
+  font-size: 12px;
+}

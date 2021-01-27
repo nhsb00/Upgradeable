@@ -41,13 +41,20 @@ export const fetchProject = (projectId) => dispatch => {
 
 export const createProject = (project) => dispatch => {
     return ProjectApiUtil.createProject(project)
-    .then(project => dispatch(receiveProject(project))
-    )
+    .then((project) => {
+        dispatch(receiveProject(project))
+        return project
+    }
+    , (error) => (dispatch(receiveProjectErrors(error.responseJSON))
+    ))
 };
 
 export const updateProject = (project) => dispatch => {
     return ProjectApiUtil.updateProject(project)
-    .then((project) => dispatch(receiveProject(project))
+    .then((project) => {
+        dispatch(receiveProject(project))
+        return project
+    }
     , error => (dispatch(receiveProjectErrors(error.responseJSON))
     ))
 };

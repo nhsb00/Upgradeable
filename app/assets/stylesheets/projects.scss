@@ -2,6 +2,88 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.projectindexitem > a {
-    color: black;
+.project-main {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    width: 1016px;
+    margin: 40px auto 36px;
+    background: #fff;
+    border: 1px solid rgba(119,130,135,.4);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.project-title {
+    align-self: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.project-image-holder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 135px;
+    border: 1px solid #dedede;
+    border-radius: 10px 10px 0 0;
+    background: #f6f6f6;
+    border-bottom: none;
+} 
+
+.project-image {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 114px;
+    width: 97.64%;
+    border-radius: 10px;
+    border: solid 1px #dedede;
+    color: #aaa;
+    -webkit-box-shadow: inset 0 0 3px 3px #dfdfdf;
+}
+
+.project-edit {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    height: 46.38px;
+    padding: 0 12px;;
+    background: #f6f6f6;
+    border: 1px solid #dedede;
+    border-top: none;
+    box-shadow: 0 4px 2px -2px #dfdfdf;
+}
+
+.project-button {
+    border-radius: 6px;
+    height: 34px;
+    padding: 6px 12px;
+    margin-left: 5px;
+    border: solid 1px #e5991e;
+    background: #faac18;
+    color: white;
+}
+
+.project-description {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 968px;
+    height: 150px;
+    border: 1px solid #dedede;
+    border-radius: 10px;
+    border-bottom: none;
+    background: #f6f6f6;
+    margin: 30px auto 0 auto;
+} 
+
+.project-description textarea {
+    margin: 10px;
+    width: 97.64%;
+    height: 129px;
+    border-radius: 10px;
+    border: 1px solid#dedede;
+
 }

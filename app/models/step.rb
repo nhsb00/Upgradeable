@@ -3,6 +3,6 @@ class Step < ApplicationRecord
 
     belongs_to :project,
     foreign_key: :project_id,
-    class_name: :Step
+    class_name: :Project
 
 end

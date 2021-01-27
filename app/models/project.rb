@@ -6,7 +6,7 @@ class Project < ApplicationRecord
         class_name: :User
 
     has_many :steps,
-    foreign_key: :project_id,
-    class_name: :Step
+        foreign_key: :project_id,
+        class_name: :Step
     
 end

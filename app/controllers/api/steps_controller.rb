@@ -1,7 +1,7 @@
 class Api::StepsController < ApplicationController
     
     def index 
-        @steps = Step.all
+        @steps = Project.find(params[:project_id]).steps
         render 'api/steps/index'
     end
 
@@ -13,7 +13,6 @@ class Api::StepsController < ApplicationController
     def create
         @step = Step.new(step_params)
         @step.project_id = params[:project_id]
-        debugger
         if @step.save
             render 'api/steps/show'
         else

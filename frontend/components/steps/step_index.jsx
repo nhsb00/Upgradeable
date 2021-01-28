@@ -8,34 +8,32 @@ class StepIndex extends React.Component {
     }
     
     componentDidMount() {
-        debugger
-        this.props.fetchAllSteps(this.props.projectIid);
+        this.props.fetchAllSteps(this.props.projectId);
     }
 
     render() {
-        if (!steps) return null;
 
-        const { steps, updateStep, deleteStep } = this.props;
+        if (!this.props.steps) return null;
 
-        debugger
-
+        const { steps, updateStep, deleteStep, projectId } = this.props;
+        
         return (
             <div>
                 <ul>
                     {
-                        steps.map(step => (
+                        Object.values(steps).map(step => (
                             <StepIndexItem
                                 step={ step }
                                 updateStep={ updateStep }
                                 deleteStep={ deleteStep }
                                 key={step.id}
+                                projectId={projectId}
                             />
                         ))
                     }
                 </ul>
             </div>
         );
-
     }
 }
 

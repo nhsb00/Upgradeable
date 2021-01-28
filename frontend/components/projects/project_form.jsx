@@ -7,13 +7,16 @@ class ProjectForm extends React.Component {
     constructor(props) {
         super(props);
         this.state = this.props.project;
+        this.state.steps = [];
 
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleDelete = this.handleDelete.bind(this);
+        this.handleCreateStep = this.handleCreateStep.bind(this);
     }
 
     handleSubmit(e) {
         e.preventDefault();
+        this.props.createStep(this.state, this.props.projectId)
         this.props.updateProject(this.state)
             .then((project) => {this.props.history.push(`/projects/${project.id}`)});
     }
@@ -24,10 +27,23 @@ class ProjectForm extends React.Component {
             .then(() => { this.props.history.push(`/`) });
     }
 
+    handleCreateStep() {
+        this.setState({
+            steps: this.state.steps.concat([{head:'', body:''}])
+        })
+    }
+
     update(field) {
         return e => this.setState({ [field]: e.currentTarget.value })
     }
-    
+
+    handleStepList() {
+        return (
+            this.state.steps.map(step => {
+                return <AddStepContainer />
+            })
+        )
+    }
     render() {
         return (
             <div className="project-main">
@@ -51,10 +67,10 @@ class ProjectForm extends React.Component {
 
                 <div className="project-step">
                     <div>
-                        <StepIndexContainer />
+                        {this.handleStepList()}
                     </div>
                     <div className="add-step">
-                        <AddStepContainer />
+                        <button onClick={()=>{this.handleCreateStep()}}>Add Step</button>
                     </div>
                 </div>
 

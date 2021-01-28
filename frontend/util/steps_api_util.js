@@ -1,5 +1,4 @@
 export const fetchAllSteps = (projectId) => {
-    debugger
     return $.ajax({
         url: `/api/projects/${projectId}/steps`,
         method: 'GET'
@@ -7,7 +6,6 @@ export const fetchAllSteps = (projectId) => {
 };
 
 export const fetchStep = stepId => {
-    debugger
     return $.ajax({
         url: `/api/steps/${stepId}`,
         method: 'GET',
@@ -16,7 +14,6 @@ export const fetchStep = stepId => {
 };
 
 export const createStep = (step, projectId) => {
-    debugger
     return $.ajax({
         url: `/api/projects/${projectId}/steps`,
         method: 'POST',
@@ -25,7 +22,6 @@ export const createStep = (step, projectId) => {
 };
 
 export const updateStep = (step) => {
-    debugger
     return $.ajax({
         url: `/api/steps/${step.id}`,
         method: 'PATCH',
@@ -34,7 +30,6 @@ export const updateStep = (step) => {
 };
 
 export const deleteStep = (stepId) => {
-    debugger
     return $.ajax({
         url: `/api/steps/${stepId}`,
         method: 'DELETE',

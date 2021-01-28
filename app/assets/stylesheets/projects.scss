@@ -80,9 +80,10 @@
 } 
 
 .project-description textarea {
+    resize: none;
     margin: 10px;
     width: 97.64%;
-    height: 129px;
+    height: 86%;
     border-radius: 10px;
     border: 1px solid#dedede;
 

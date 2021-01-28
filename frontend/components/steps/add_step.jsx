@@ -18,36 +18,33 @@ class AddStep extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault();
-        debugger
         this.props.createStep(this.state, this.props.projectId)
+        this.setState({head: "", description: ""})
     }
 
     render() {
 
         return (
-            <div>
-                <div>
-                    <div>
-                        <div>Head</div>
-                        <textarea
+            <div className="addstep-box">
+                <div className="addstep-input">
+                    <div className="addstep-head">
+                        <textarea 
                             value={this.state.head}
                             placeholder='Enter a step number and head'
                             onChange={this.update('head')}
                         >
                         </textarea>
                     </div>
-                    <div>
-                        <div>Description</div>
-                        <textarea
+                    <div className="addstep-description">
+                        <textarea 
                             value={this.state.description}
                             placeholder='Enter description of this step'
                             onChange={this.update('description')}
                         ></textarea>
                     </div>
                 </div>
-                <div>
-                    <div></div>
-                    <button onClick={this.handleSubmit}>Add Step</button>
+                <div className="addstep-button-holder">
+                    <button className="addstep-button" onClick={this.handleSubmit}>Save Step</button>
                 </div>
             </div>
         )

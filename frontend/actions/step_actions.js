@@ -3,8 +3,6 @@ import * as StepApiUtil from '../util/steps_api_util';
 export const RECEIVE_ALL_STEPS = 'RECEIVE_ALL_STEPS'
 export const RECEIVE_STEP = 'RECEIVE_STEP'
 export const REMOVE_STEP = 'REMOVE_STEP'
-export const RECEIVE_ERRORS = 'RECEIVE_ERRORS'
-export const CLEAR_ERRORS = 'CLEAR_ERRORS'
 
 const receiveAllSteps = (steps) => ({
     type: RECEIVE_ALL_STEPS,
@@ -47,7 +45,7 @@ export const updateStep = (step) => dispatch => {
         });
 };
 
-export const deleteStep = (stepId) => dispatch => {
-    return StepApiUtil.deleteStep(stepId)
-        .then(() => dispatch(removeStep(step.step.id)))
+export const deleteStep = (step) => dispatch => {
+    return StepApiUtil.deleteStep(step)
+        .then(() => dispatch(removeStep(step.id)))
 };

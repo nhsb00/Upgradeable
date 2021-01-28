@@ -11,8 +11,8 @@ class ProjectShow extends React.Component {
     }
 
     componentDidMount() {
+        this.props.fetchAllSteps(this.props.match.params.id);
         this.props.fetchProject(this.props.match.params.id);
-        this.props.fetchAllSteps(this.props.projectId);
     }
 
     handleDelete(e) {

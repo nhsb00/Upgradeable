@@ -9,6 +9,7 @@ class AddStep extends React.Component {
             description: ''
         }
 
+        this.submitted = false;
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
@@ -18,9 +19,15 @@ class AddStep extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault();
+        this.submitted = true;
         this.props.createStep(this.state, this.props.projectId)
-        this.setState({head: "", description: ""})
     }
+    
+    componentWillUnmount() {
+        if (this.submitted === false ) {
+            this.props.createStep(this.state, this.props.projectId)
+        }
+    };
 
     render() {
 

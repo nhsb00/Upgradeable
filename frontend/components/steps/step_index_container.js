@@ -4,10 +4,14 @@ import { fetchAllSteps, deleteStep, updateStep } from '../../actions/step_action
 import { withRouter } from 'react-router-dom';
 
 
-const mapStateToProp = (state, ownProps) => ({
-    projectId: state.entities.projects[ownProps.match.params.id].id,
-    steps: state.entities.steps,
-});
+const mapStateToProp = (state, ownProps) => {
+    debugger
+    return {
+        projectId: state.entities.projects[ownProps.match.params.id].id,
+        steps: state.entities.steps,
+
+    }
+};
 
 const mapDispatchToProp = dispatch => ({
     fetchAllSteps: (projectId) => dispatch(fetchAllSteps(projectId)),

@@ -6,8 +6,9 @@ import AddStepContainer from '../steps/add_step_container';
 class ProjectForm extends React.Component {
     constructor(props) {
         super(props);
+        debugger
         this.state = this.props.project;
-        this.state.steps = [];
+        this.state.steps = this.props.steps;
 
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleDelete = this.handleDelete.bind(this);
@@ -16,7 +17,6 @@ class ProjectForm extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault();
-        this.props.createStep(this.state, this.props.projectId)
         this.props.updateProject(this.state)
             .then((project) => {this.props.history.push(`/projects/${project.id}`)});
     }

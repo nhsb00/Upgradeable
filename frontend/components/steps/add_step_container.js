@@ -7,6 +7,7 @@ const mapStateToProp = (state, ownProps) => {
     return {
         projectId: ownProps.match.params.id,
         history: ownProps.history
+        
     }
 };
 

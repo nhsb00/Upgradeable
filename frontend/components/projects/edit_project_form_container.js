@@ -10,6 +10,7 @@ import StepIndex from '../steps/step_index';
 const mapStateToProps = (state, ownProps) => {
     return {
         project: state.entities.projects[ownProps.match.params.id],
+        steps: Object.values(state.entities.steps),
         errors: state.errors.project,
         history: ownProps.history
     }
@@ -32,7 +33,7 @@ class EditProjectForm extends React.Component {
     }
 
     render() {
-        const { updateProject, deleteProject, project, createStep } = this.props;
+        const { steps, updateProject, deleteProject, project, createStep } = this.props;
         
         if (!project) return null;
         return (
@@ -41,6 +42,7 @@ class EditProjectForm extends React.Component {
                 updateProject={updateProject}
                 deleteProject={deleteProject}
                 project={project}
+                steps={steps}
                 />
  
         );

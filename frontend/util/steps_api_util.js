@@ -1,4 +1,5 @@
 export const fetchAllSteps = (projectId) => {
+    debugger 
     return $.ajax({
         url: `/api/projects/${projectId}/steps`,
         method: 'GET'

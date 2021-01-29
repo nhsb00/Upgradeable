@@ -32,7 +32,7 @@ class LogInForm extends React.Component {
     handleDemoSubmit(e) {
         e.preventDefault();
         const user = {
-            username: 'Guest',
+            username: 'guest',
             password: 'passowrd',
             email: 'guest@upgradeables.com',
             country: 'United State'

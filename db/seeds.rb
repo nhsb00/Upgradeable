@@ -8,7 +8,7 @@
 
 
 guest = User.create!(
-    username: 'Guest',
+    username: 'guest',
     password: 'passowrd',
     email: 'guest@upgradeables.com',
     country: 'United State'
@@ -35,13 +35,13 @@ dalgonacoffee = Project.create!(
             Milk, for serving')
 
 step1 = Step.create!(
-    project_id: dalgonacoffee.id
     head: 'Step 1',
-    description: 'In a medium bowl, combine sugar, coffee, and water. Using a hand mixer or a whisk, vigorously whisk until mixture turns silky smooth and shiny, then continue whisking until it thickens and holds its lofty, foamy shape. (If whisking by hand, it will take 8 to 12 minutes to get to optimal fluffiness.)'
+    description: 'In a medium bowl, combine sugar, coffee, and water. Using a hand mixer or a whisk, vigorously whisk until mixture turns silky smooth and shiny, then continue whisking until it thickens and holds its lofty, foamy shape. If whisking by hand, it will take 8 to 12 minutes to get to optimal fluffiness.',
+    project_id: dalgonacoffee.id
 )
 
 step2 = Step.create!(
-    project_id: dalgonacoffee.id
     head: 'Step 2',
-    description: 'Fill a glass most of the way full with ice and milk, then dollop and swirl the whipped coffee mixture on top, mixing before drinking, if desired.'
+    description: 'Fill a glass most of the way full with ice and milk, then dollop and swirl the whipped coffee mixture on top, mixing before drinking, if desired.',
+    project_id: dalgonacoffee.id
 )

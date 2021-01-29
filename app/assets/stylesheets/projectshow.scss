@@ -1,0 +1,80 @@
+.projectshow {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 30px;
+}
+
+.projectshow-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 800px;
+}
+
+.projectshow-title {
+    color: #333333;
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+    margin: 0 0 10px;
+    height: 100px;
+}
+
+.projectshow-title > p {
+    color: #b3b3b3;
+    font-size: 12px;
+    text-align: center;
+    margin: 20px 0 0 0;
+}
+
+.projectshow-image {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 650px;
+    height: 450px;
+    border: 1px solid #dedede;
+    border-radius: 10px;
+    background: #f6f6f6;
+    margin-bottom: 50px;
+}
+
+.projectshow-body  {
+    display: flex;
+    line-height: 1.6;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.projectshow-step {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+    line-height: 1.6;
+}
+
+.stepindexitem {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0 20px 0;
+}
+
+.stepindexitem-head {
+    color: #333333;
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.stepindexitem-description {
+     display: flex;
+    line-height: 1.6;
+    justify-content: center;
+    margin-bottom: 20px;
+}

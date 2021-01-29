@@ -5,7 +5,7 @@ import { fetchAllSteps } from '../../actions/step_actions';
 
 const mapStateToProps = (state, ownProps) => ({
     project: state.entities.projects[ownProps.match.params.id],
-    currentUser: state.entities.users,
+    username: state.entities.users[ownProps.match.params.id],
     errors: state.errors.project,
     history: ownProps.history
 });

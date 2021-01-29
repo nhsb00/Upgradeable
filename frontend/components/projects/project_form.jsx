@@ -6,7 +6,6 @@ import AddStepContainer from '../steps/add_step_container';
 class ProjectForm extends React.Component {
     constructor(props) {
         super(props);
-        debugger
         this.state = this.props.project;
         this.state.steps = this.props.steps;
 
@@ -40,14 +39,14 @@ class ProjectForm extends React.Component {
     handleStepList() {
         return (
             this.state.steps.map(step => {
-                return <AddStepContainer />
+                return <AddStepContainer step={step}/>
             })
         )
     }
     render() {
         return (
             <div className="project-main">
-                <div className="project-title">{ this.props.project.title }</div>
+                {/* <div className="project-title">{ this.props.project.title }</div> */}
                 
                 <div className="project-image-holder">
                     <div className="project-image">Image Box</div>    
@@ -70,7 +69,7 @@ class ProjectForm extends React.Component {
                         {this.handleStepList()}
                     </div>
                     <div className="add-step">
-                        <button onClick={()=>{this.handleCreateStep()}}>Add Step</button>
+                        <button className="project-button" onClick={()=>{this.handleCreateStep()}}>Add Step</button>
                     </div>
                 </div>
 

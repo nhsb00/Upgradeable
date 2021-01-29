@@ -4,28 +4,37 @@ class AddStep extends React.Component {
     constructor(props) {
         super(props)
 
-        this.state = {
-            head: '',
-            description: ''
-        }
+        this.state = this.props.step;
 
-        this.submitted = false;
+        this.submitted = true;
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
     update(field) {
-        return e => this.setState({ [field]: e.currentTarget.value });
+        return e => {
+            this.submitted = false;
+            this.setState({ [field]: e.currentTarget.value });
+        } 
     }
 
     handleSubmit(e) {
         e.preventDefault();
         this.submitted = true;
-        this.props.createStep(this.state, this.props.projectId)
+
+        if (this.state.id) {
+            this.props.updateStep(this.state);
+        } else {
+            this.props.createStep(this.state, this.props.projectId);
+        }
     }
     
     componentWillUnmount() {
         if (this.submitted === false ) {
-            this.props.createStep(this.state, this.props.projectId)
+            if (this.state.id) {
+                this.props.updateStep(this.state);
+            } else {
+                this.props.createStep(this.state, this.props.projectId);
+            }
         }
     };
 

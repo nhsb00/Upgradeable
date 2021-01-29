@@ -34,17 +34,28 @@ class ProjectShow extends React.Component {
         // }
         
         return ( 
-            <div>
-                <h1>{project.title}</h1>
-                <p>{project.body}</p>
+            <div className='projectshow'>
+                <div className='projectshow-container'>
+                    <div className='projectshow-title'>
+                        <h1>{project.title}</h1>
+                        <p>Published by {this.props.username}</p>
+                    </div>
+                    <div className='projectshow-image'>
+                        Image-box
+                    </div>
+                    <div className='projectshow-body'>
+                        <p>{project.body}</p>
+                    </div>
+                    <div className='projectshow-step'>
+                        <StepIndexContainer />
+                    </div>
 
-                <StepIndexContainer />
-
-                <Link className="project-button" to="/">Back to Index</Link>
-                <Link className="project-button" to={`/projects/${project.id}/edit`}>Edit</Link>
-                <button className="project-button" onClick={this.handleDelete}>Delete</button>
-                
-                
+                    <div>
+                        <Link className="project-button" to="/">Back</Link>
+                        <Link className="project-button" to={`/projects/${project.id}/edit`}>Edit</Link>
+                        <button className="project-button" onClick={this.handleDelete}>Delete</button>
+                    </div>
+                </div>
             </div>
         );
     }

@@ -5,7 +5,6 @@ import { withRouter } from 'react-router-dom';
 
 
 const mapStateToProp = (state, ownProps) => {
-    debugger
     return {
         projectId: state.entities.projects[ownProps.match.params.id].id,
         steps: state.entities.steps,

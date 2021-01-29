@@ -34,7 +34,9 @@ class Splash extends React.Component {
                         <p>Making things makes people happy. We can't prove it, but we know it to be true. Find your happy place, and join one of the friendliest online communities anywhere.</p>
                     </div>
                 </div>
-                <ProjectIndexContainer />
+                <div >
+                     <ProjectIndexContainer />
+                </div>
             </div>
         )
     }

@@ -21,7 +21,7 @@ class Api::StepsController < ApplicationController
     end
 
     def update
-        @step = Step.find(params[:id])
+        @step = Step.find(params[:step][:id])
         if @step.update(step_params)
             render 'api/steps/show'
         else

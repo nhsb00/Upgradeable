@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { openModal } from '../../actions/modal_actions';
 import ProjectForm from './project_form';
 import { fetchProject, updateProject, deleteProject } from '../../actions/project_actions';
+import { fetchAllSteps } from '../../actions/step_actions';
 import { createStep } from '../../actions/step_actions';
 import { withRouter } from 'react-router-dom';
 import StepIndex from '../steps/step_index';
@@ -19,6 +20,7 @@ const mapStateToProps = (state, ownProps) => {
 const mapDispatchToProps = dispatch => {
     return {
         openeModal: () => dispatch(openModal()),
+        fetchAllSteps: (projectId) => dispatch(fetchAllSteps(projectId)),
         fetchProject: projectId => dispatch(fetchProject(projectId)),
         updateProject: project => dispatch(updateProject(project)),
         deleteProject: (projectId) => dispatch(deleteProject(projectId)),
@@ -28,7 +30,8 @@ const mapDispatchToProps = dispatch => {
 
 
 class EditProjectForm extends React.Component {
-    componentDidMount() {
+    componentDidMount() {   
+        this.props.fetchAllSteps(this.props.match.params.id);
         this.props.fetchProject(this.props.match.params.id);
     }
 

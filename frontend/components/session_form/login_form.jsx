@@ -31,7 +31,12 @@ class LogInForm extends React.Component {
 
     handleDemoSubmit(e) {
         e.preventDefault();
-        const user = { username: 'soobin', password: 'soobin', email: 'soobin@gmail.com', country: 'United States'}
+        const user = {
+            username: 'Guest',
+            password: 'passowrd',
+            email: 'guest@upgradeables.com',
+            country: 'United State'
+        }
         this.props.demologin(user);
     }
 

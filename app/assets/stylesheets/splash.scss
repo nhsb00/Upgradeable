@@ -68,5 +68,24 @@
 
 .text > div > p {
     font-size: 18px;
-   
+}
+
+.projectindexcontainer {
+    color: black;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 100px;
+    margin-right: 100px;
+    justify-content: space-around;
+}
+
+.projectindexitem {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 304px;
+    height: 80px;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    margin: 20px;
 }

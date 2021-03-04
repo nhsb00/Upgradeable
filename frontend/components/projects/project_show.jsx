@@ -21,10 +21,21 @@ class ProjectShow extends React.Component {
             .then(() => { this.props.history.push(`/`) });
     }
 
-    render() {
-        const { project, projectId } = this.props;
+    projectDeleteEdit() {
+        return (
+            <div>
+                <Link className="project-button" to={`/projects/${this.props.project.id}/edit`}>Edit</Link>
+                {/* <button className="project-button" onClick={this.handleDelete}>Delete</button> */}
+            </div>
+        )
+    }
 
-        if (!project) return null;
+    render() {
+        // const { project, projectId } = this.props;
+        
+        const delelteEditButtion = (this.props.project.user_id === this.props.currentUser) ? this.projectDeleteEdit() : null
+
+        if (!this.props.project) return null;
         
         // if (project.user_id === this.state.session.id) {
         //     button = <div>
@@ -37,14 +48,14 @@ class ProjectShow extends React.Component {
             <div className='projectshow'>
                 <div className='projectshow-container'>
                     <div className='projectshow-title'>
-                        <h1>{project.title}</h1>
-                        <p>Published by {this.props.username}</p>
+                        <h1>{this.props.project.title}</h1>
+                        <p>Published by</p>
                     </div>
                     <div className='projectshow-image'>
                         Image-box
                     </div>
                     <div className='projectshow-body'>
-                        <p>{project.body}</p>
+                        <p>{this.props.project.body}</p>
                     </div>
                     <div className='projectshow-step'>
                         <StepIndexContainer />
@@ -52,8 +63,10 @@ class ProjectShow extends React.Component {
 
                     <div>
                         <Link className="project-button" to="/">Back</Link>
-                        <Link className="project-button" to={`/projects/${project.id}/edit`}>Edit</Link>
-                        <button className="project-button" onClick={this.handleDelete}>Delete</button>
+                    </div>
+                    
+                    <div>
+                        {delelteEditButtion}
                     </div>
                 </div>
             </div>

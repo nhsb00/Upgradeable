@@ -8,6 +8,14 @@ class AddStep extends React.Component {
 
         this.submitted = true;
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleDeleteStep = this.handleDeleteStep.bind(this);
+    }
+
+    handleDeleteStep(e) {
+        e.preventDefault();
+        this.props.deleteStep(this.props.step.id)
+        .then(() => {this.props.history.push(`/projects/${this.props.projectId}`) });
+        // .then(() => this.props.fetchAllSteps(this.props.projectId))
     }
 
     update(field) {
@@ -39,7 +47,6 @@ class AddStep extends React.Component {
     };
 
     render() {
-
         return (
             <div className="addstep-box">
                 <div className="addstep-input">
@@ -61,6 +68,7 @@ class AddStep extends React.Component {
                 </div>
                 <div className="addstep-button-holder">
                     <button className="addstep-button" onClick={this.handleSubmit}>Save Step</button>
+                    <button className="project-button" onClick={this.handleDeleteStep}>Delete</button>
                 </div>
             </div>
         )

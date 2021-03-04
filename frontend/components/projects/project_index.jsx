@@ -14,7 +14,7 @@ class ProjectIndex extends React.Component {
         const { projects, deleteProject } = this.props;
         return (
             <div>
-                <ul>
+                <ul className="projectindex">
                     {
                         projects.map(project => (
                             <ProjectIndexItem

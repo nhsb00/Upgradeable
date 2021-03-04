@@ -39,7 +39,9 @@ class ProjectForm extends React.Component {
     handleStepList() {
         return (
             this.state.steps.map(step => {
-                return <AddStepContainer step={step}/>
+                return <AddStepContainer 
+                step={step}
+                />
             })
         )
     }

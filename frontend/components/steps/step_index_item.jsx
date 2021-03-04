@@ -11,9 +11,9 @@ const StepIndexItem = props => (
         </div>
         {/* <Link to={`/steps/${props.step.id}`}>Edit</Link> */}
         <div>
-            <button className="project-button" onClick={() => props.deleteStep(props.step.id)}>Delete</button>
+            {/* <button className="project-button" onClick={() => props.deleteStep(props.step.id)}>Delete</button> */}
         </div>
     </li>
 );
-
+ 
 export default StepIndexItem;

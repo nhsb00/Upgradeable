@@ -18,7 +18,7 @@ class Header extends React.Component {
             <h1 className="header-title">
                 <img id="instructables-logo" alt="Instructables" src="https://www.instructables.com/assets/img/instructables-logo-v2.png"></img>
                 <a href="/">Upgradeables</a>
-                <a href="./projects"><button className="header-title-button">Projects</button></a>
+                <a href="#/projects"><button className="header-title-button">Projects</button></a>
             </h1>
             <div>
             </div>

@@ -2,8 +2,10 @@ import React from 'react';
 import { closeModal } from '../../actions/modal_actions';
 import { connect } from 'react-redux';
 import TitleFormContainer from './title_form_container';
+import ProjectPhotoContainer from './project_photo_container';
 
-function Modal({ modal, closeModal }) {
+function Modal(props) {
+    const { modal, closeModal, project } = props
     if (!modal) {
         return null;
     }
@@ -11,6 +13,11 @@ function Modal({ modal, closeModal }) {
     switch (modal) {
         case "start_project":
             component = <TitleFormContainer closeModal={ closeModal }/>;
+            break;
+        case "add_photo":
+            component = <ProjectPhotoContainer 
+                closeModal={ closeModal }
+                project={ project } />;
             break;
         default:
             return null;

@@ -1,8 +1,12 @@
 class Api::ProjectsController < ApplicationController
     
-    def index 
-        @projects = Project.all
-        render 'api/projects/index'
+    def index
+        if params[:search]
+            @projects = Project.search_by_title(params[:search])
+        else
+            @projects = Project.all
+            render 'api/projects/index'
+        end
     end
 
     def show
@@ -22,6 +26,7 @@ class Api::ProjectsController < ApplicationController
     end
 
     def update
+        
         @project = Project.find(params[:id])
         if @project.update(project_params)
             render 'api/projects/show'
@@ -40,9 +45,15 @@ class Api::ProjectsController < ApplicationController
         end
     end
 
+    # def search
+    #     search = "%" + params[:search].downcase + "%"
+    #     @projects = Project.where("LOWER(title) like ?", search, search)
+    #     redner :index
+    # end
+
     private
 
     def project_params
-        params.require(:project).permit(:title, :body, :id)
+        params.require(:project).permit(:title, :body, :id, :photo)
     end
 end

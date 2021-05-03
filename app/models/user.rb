@@ -6,6 +6,10 @@ class User < ApplicationRecord
     has_many :projects,
         foreign_key: :user_id,
         class_name: :Project
+    
+    has_many :comments,
+        foreign_key: :user_id,
+        class_name: :Comment
 
     after_initialize :ensure_session_token
 

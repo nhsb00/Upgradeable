@@ -1,6 +1,7 @@
 import { connect } from 'react-redux';
 import ProjectIndex from './project_index';
 import { fetchAllProjects, deleteProject } from '../../actions/project_actions';
+import { withRouter } from "react-router-dom";
 
 
 const mSTP = state => ({
@@ -8,8 +9,8 @@ const mSTP = state => ({
 });
 
 const mDTP = dispatch => ({
-    fetchAllProjects: () => dispatch(fetchAllProjects()),
+    fetchAllProjects: (search) => dispatch(fetchAllProjects(search)),
     deleteProject: () => dispatch(deleteProject())
 });
 
-export default connect(mSTP, mDTP)(ProjectIndex);
+export default withRouter(connect(mSTP, mDTP)(ProjectIndex));

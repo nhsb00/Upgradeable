@@ -14,6 +14,7 @@
   color: white; /* White text */
   font-size: 15px; /* Set a font size */
   cursor: pointer; /* Mouse pointer on hover */
+  margin-left: 10px;
 }
 
 .main-button {
@@ -53,4 +54,9 @@
   
   padding-right: 20px;
   font-size: 12px;
+}
+
+.home-icon {
+  width: 30px;
+  height: 30px;
 }

@@ -5,7 +5,7 @@ class Api::StepsController < ApplicationController
         render 'api/steps/index'
     end
 
-    def show
+    def showx   
         @step = Step.find(params[:id])
         render 'api/steps/show'
     end

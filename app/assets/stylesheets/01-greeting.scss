@@ -11,31 +11,27 @@ a {
 }
 
 .header {
-  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   height: 73px;
-      justify-content: space-between;
-     padding: 8px, 20px;
-     -webkit-box-pack: justify;
-     -webkit-box-align: center;
-     align-items: center;
-     background-color: #eee;
-     padding: 8px 0;
+  padding: 8px 20px;
+  background-color: #eee;
 }
 
 .header-title {
-   display: flex;
-    align-items: center;
-    margin-left: 20px;
-   
+  display: flex;
+  align-items: center;
+  margin-left: 0px;
 }
 
 .header-title > a {
- font-size: 20px;
- font-weight: bold;
-   margin-right: 16px;
-   margin-left: 5px;
-   color: black;
-   margin-bottom: 5px;
+  font-size: 20px;
+  font-weight: bold;
+  margin-right: 16px;
+  margin-left: 5px;
+  color: black;
+  margin-bottom: 5px;
 }
 
 .header-title-button {
@@ -54,4 +50,19 @@ a {
 #instructables-logo{
   height: 72px;
   width: auto;
+}
+
+.search-bar {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 6px 10px;
+  background-color: #fff;
+  border-color: #dedede;
+}
+
+.search input {
+  font-size: 14px;
+  border: none;
+  outline: none;
+  width: 90px;
 }

@@ -6,7 +6,7 @@ class Footer extends React.Component {
             <div className="footer">
                 <div className="footer-list">
                     <div className="footer-img">
-                        Image
+                        <img className="footer-instructables" src="https://www.instructables.com/assets/img/instructables-logo-v2.png" />
                     </div>
                     <div className="footer-contact">
                         <h1>Contact</h1>

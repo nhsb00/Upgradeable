@@ -1,4 +1,4 @@
-import * as ProjectApiUtil from '../util/project_api_util';
+ import * as ProjectApiUtil from '../util/project_api_util';
 
 export const RECEIVE_ALL_PROJECTS = "RECEIVE_ALL_PROJECTS";
 export const RECEIVE_PROJECT = "RECEIVE_PROJECT";
@@ -25,12 +25,18 @@ const receiveProjectErrors = errors => ({
     errors
 });
 
-export const fetchAllProjects = () => dispatch => {
-    return ProjectApiUtil.fetchAllProjects()
+export const fetchAllProjects = (search) => dispatch => {
+    return ProjectApiUtil.fetchAllProjects(search)
     .then((projects) => dispatch(receiveAllProjects(projects))
     , error => (dispatch(receiveProjectErrors(error.responseJSON))
     ))
 };
+
+// export const fetchSearchProjects = (search) => dispatch => {
+//     return ProjectApiUtil.fetchSearchProjects(search)
+//     .then((projects) => dispatch(receiveAllProjects(projects))
+//     )
+// };
 
 export const fetchProject = (projectId) => dispatch => {
     return ProjectApiUtil.fetchProject(projectId)
@@ -50,6 +56,7 @@ export const createProject = (project) => dispatch => {
 };
 
 export const updateProject = (project) => dispatch => {
+    
     return ProjectApiUtil.updateProject(project)
     .then((project) => {
         dispatch(receiveProject(project))

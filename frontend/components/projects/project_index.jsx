@@ -7,7 +7,17 @@ class ProjectIndex extends React.Component {
         super(props)
     }
     componentDidMount() {
-        this.props.fetchAllProjects();
+        if (this.props.location.pathname.includes("search")) {
+            this.props.fetchAllProjects(this.props.match.params.query);
+        } else {
+            this.props.fetchAllProjects();
+        }
+    }
+
+    componentDidUpdate(prevProps) {
+        if (prevProps.match.params.query !== this.props.match.params.query) {
+             this.props.fetchAllProjects(this.props.match.params.query);
+        }
     }
 
     render() {

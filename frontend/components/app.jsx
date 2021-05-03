@@ -13,6 +13,7 @@ import ProjectIndexContainer from './projects/project_index_container';
 import ProjectShowContainer from './projects/project_show_container';
 import CreateProjectFormContainer from './projects/create_project_form_container';
 import EditProjectFormContainer from './projects/edit_project_form_container';
+import ProjectPhotoContainer from './modal/project_photo_container';
 import Footer from "./footer/footer";
 
 const App = () => (
@@ -30,8 +31,10 @@ const App = () => (
                 <Route exact path='/projects' component={ProjectIndexContainer} />
                 <Route exact path='/projects/:id' component={ProjectShowContainer} />
                 <Route exact path='/projects/new' component={CreateProjectFormContainer} />
+                <Route exact path='/search/:query' component={ProjectIndexContainer}/>
                 <Route exact path='/projects/:id/edit' component={EditProjectFormContainer} />
             </Switch>    
+                {/* <Route path='/projects/:id/edit' component={ProjectPhotoContainer} /> */}
         </div>
         <footer>
             <Footer />

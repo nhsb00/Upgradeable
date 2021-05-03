@@ -18,7 +18,7 @@ class UserDropdwon extends React.Component {
 
     handleOpenModal(e) {
         e.preventDefault();
-        this.props.openModal();
+         this.props.openModal()
     }
 
     render() { 

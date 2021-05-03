@@ -12,6 +12,7 @@ class StepIndex extends React.Component {
     }
 
     render() {
+        
         if (!this.props.steps) return null;
 
         const { steps, updateStep, deleteStep, projectId } = this.props;

@@ -33,6 +33,7 @@
 } 
 
 .project-image {
+    overflow: hidden;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -64,6 +65,7 @@
     border: solid 1px #e5991e;
     background: #faac18;
     color: white;
+    cursor: pointer;
 }
 
 .project-description {
@@ -95,3 +97,55 @@
     align-items: center;
     margin: 20px;
 }
+
+.photo-container {
+    width: 560px;
+    height: 475px;
+    background-color: white;
+    overflow: hidden;
+    border-radius: 6px;
+}
+
+.photo-holder {
+    font-size: 40px;
+    width: 500px;
+    height: 350px;
+    overflow: hidden;
+    margin: 30px auto;
+    border: 2px dashed #ddd; 
+}
+
+.photo-footer {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    background: #f6f6f6;
+    border: 1px solid #dedede;
+    padding: 14px 15px 15px;
+    bottom: 0;
+}
+
+.file {
+    width: 0.1px;
+	height: 0.1px;
+    opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
+
+.file-input {
+    text-align: center;
+    display: block;
+    position: relative;
+    border-radius: 6px;
+    width: 55px;
+    height: 20px;
+    border: solid 1px #dedede;
+    background: #f6f6f6;
+    color: black;
+    text-align: center;
+}
+
+
+

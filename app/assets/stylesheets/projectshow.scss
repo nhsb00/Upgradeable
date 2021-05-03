@@ -35,12 +35,16 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 650px;
+    width: 800px;
     height: 450px;
     border: 1px solid #dedede;
     border-radius: 10px;
     background: #f6f6f6;
     margin-bottom: 50px;
+}
+
+.projectshow-image img {
+    width: 100%;
 }
 
 .projectshow-body  {
@@ -55,6 +59,11 @@
     justify-content: center;
     margin-bottom: 50px;
     line-height: 1.6;
+}
+
+.prject-edit-btn{
+    display: flex;
+    justify-content: space-around;
 }
 
 .stepindexitem {

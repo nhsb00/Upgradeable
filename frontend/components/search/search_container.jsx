@@ -36,7 +36,7 @@ class SearchContainer extends React.Component {
           name="search"
           value={this.state.searchString}
         />
-        <i class="fas fa-search"></i>
+        <i className="fas fa-search"></i>
       </form>
     );
   }

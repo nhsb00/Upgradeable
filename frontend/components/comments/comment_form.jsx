@@ -28,7 +28,6 @@ class CommentForm extends React.Component {
 
     render() {
         return (
-            
                 <div className="comment-box">
                     <div className="comment-content">
                         <img className="comment-img" src="https://content.instructables.com/ORIG/FCY/R6ZT/KJPPWPO4/FCYR6ZTKJPPWPO4.png?auto=webp&amp;frame=1&amp;crop=1:1&amp;width=48" />

@@ -43,6 +43,7 @@ class CommentIndexItem extends React.Component {
         )
     }
     render() {
+        debugger
         const delelteEditButtion = (this.props.comment.user_id === this.props.currentUser) ? this.commentDeleteEdit() : null
         let comment
         if (this.edit === false) {

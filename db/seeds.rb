@@ -4,8 +4,7 @@
 # Examples:
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
-
+heroku run bundle exec rails db:seed 
 
 guest = User.create!(
     username: 'guest',

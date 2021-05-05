@@ -22,6 +22,16 @@ class ProjectForm extends React.Component {
         this.handleCreateStep = this.handleCreateStep.bind(this);
         this.handleOpenModal = this.handleOpenModal.bind(this);
     }
+    
+
+
+    // componentDidUpdate(prevProps, prevSteps) {
+    //     debugger
+    //     if (this.state.steps !== prevProps.steps ) {
+    //         debugger
+    //         this.props.fetchAllSteps(this.props.match.params.id);
+    //     }
+    // }
 
     // handleFile(e) {
     //     const file = e.currentTarget.files[0];
@@ -79,11 +89,12 @@ class ProjectForm extends React.Component {
 
 
     handleStepList() {
-        const steps = this.props.steps || {};
+        const steps = this.state.steps || {};
         return (
            Object.values(steps).map(step => {
                     return <AddStepContainer 
                     step={step}
+                    key={step.id}
                     />
             })
         )

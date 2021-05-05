@@ -45,20 +45,30 @@ class EditProjectForm extends React.Component {
     //     }
     // }
 
+    // componentDidUpdate(prevProps, prevSteps) {
+    //     debugger
+    //     if (this.props.steps !== prevProps.steps ) {
+    //         debugger
+    //         this.props.fetchAllSteps(this.props.match.params.id);
+    //     }
+    // }
+
     render() {       
-        const { steps, updateProject, deleteProject, project, createStep, openModal } = this.props;
+        const { steps, updateProject, deleteProject, project, createStep, openModal, fetchAllSteps } = this.props;
         if (!project) return null;
         
 
         return (
             <div>
             <ProjectForm
+                fetchProject={fetchProject}
                 createStep={ createStep }
                 updateProject={updateProject}
                 deleteProject={deleteProject}
                 project={project}
                 steps={steps}
                 openModal={openModal}
+                fetchAllSteps={fetchAllSteps}
                 />
             {/* <Modal 
                 project={project}/> */}

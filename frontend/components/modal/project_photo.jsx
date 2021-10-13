@@ -22,12 +22,12 @@ class projectPhoto extends React.Component {
 
     handleSavePhoto(e) {
         e.preventDefault();
-        
+        debugger
         const formData = new FormData();
         if (this.state.photoFile) {
             formData.append("project[photo]", this.state.photoFile);
         }
-        
+        debugger
         $.ajax({
             url: `/api/projects/${this.state.id}`,
             method: 'PATCH',
@@ -40,7 +40,6 @@ class projectPhoto extends React.Component {
 
     render() {  
         const preview = this.state ? <img src={this.state.photoUrl} /> : null;
-       
         return (
             <div className="photo-container">
                 <div className="">

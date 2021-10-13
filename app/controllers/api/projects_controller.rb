@@ -26,7 +26,6 @@ class Api::ProjectsController < ApplicationController
     end
 
     def update
-        
         @project = Project.find(params[:id])
         if @project.update(project_params)
             render 'api/projects/show'

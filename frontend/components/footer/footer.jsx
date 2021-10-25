@@ -12,7 +12,7 @@ class Footer extends React.Component {
                         <h1>Contact</h1>
                         <h3>Soobin Lim</h3>
                         <li>nhsb00@hotmail.com</li>
-                        <li><a href="https://nhsb00.github.io/" target="_blank">Soobin Lim's Portfolio</a></li>
+                        <li><a href="https://nhsb00.github.io/" target="_blank">Portfolio</a></li>
                     </div>
                     <div className="footer-link">
                         <h1>My Sites</h1>

@@ -6,8 +6,8 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 # heroku run bundle exec rails db:seeds
 
-User.destroy_all
-Project.destroy_all
+# User.destroy_all
+# Project.destroy_all
 
 guest = User.create!(
     username: 'guest',

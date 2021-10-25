@@ -4,7 +4,7 @@
 # Examples:
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-heroku run bundle exec rails db:seed
+# heroku run bundle exec rails db:seeds
 
 User.destroy_all
 Project.destroy_all

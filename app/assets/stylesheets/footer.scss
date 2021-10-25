@@ -26,6 +26,12 @@
 
 .footer-contact > li {
     color: gray;
+    margin: 5px;
+}
+
+.footer-contact > li a {
+    color: gray;
+
 }
 
 .footer-link > h1 {
@@ -33,8 +39,12 @@
     font-size: 20px;
 }
 
-.footer-link > a {
-     color: gray;
+.footer-link > li {
+    color: gray;
+    font-size: 20px;
     margin-bottom: 10px;
 }
 
+.footer-link > li a{
+    color: gray;
+}

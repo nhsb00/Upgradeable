@@ -90,10 +90,6 @@
     font-weight: 700;
 }
 
-.projectindexitem > p {
-   font-weight: 100;
-}
-
 .projectindex {
     display: flex;
     justify-content: center;
@@ -104,4 +100,12 @@
     width: 100%;
     height: 250px;
     margin-bottom: 20px;
+}
+
+.projecttitle {
+
+}
+
+.projectby{
+    font-weight: 100;
 }

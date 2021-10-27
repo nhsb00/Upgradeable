@@ -32,11 +32,13 @@ class TitleForm extends React.Component {
                         <form className="titleform-form" onSubmit={this.handleSubmit}>
                         <input className="titleform-input"
                                 type="text"
+                                placeholder='Add title'
                                 value={this.state.title}
                                 onChange={this.update('title')}
                                 />
                             <textarea
                                 className='titleform-textarea'
+                                placeholder='Add description'
                                 value={this.state.body}
                                 onChange={this.update('body')}
                             />

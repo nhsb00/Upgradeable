@@ -56,8 +56,10 @@ Upgradeables, a Instructables clone, is an learnable website that users can uplo
  
 ### Comment
  Users can leave, edit, and delete their comments on each projects.
+
 ![alt text](https://github.com/nhsb00/Upgradeable/blob/main/app/assets/images/comment.gif)
  
 ### Search Engine
  Users can search related projects by keyword.
+ 
 ![alt text](https://github.com/nhsb00/Upgradeable/blob/main/app/assets/images/search.gif)

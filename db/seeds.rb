@@ -24,7 +24,7 @@ soobin = User.create!(
 )
 
 dalgonacoffee = Project.create!(
-    user_id: guest.id, 
+    user_id: soobin.id, 
     title: 'DIY Dalgona Coffee',
     body: 'Dalgona coffee—it started as a Tik Tok trend and has now exploded all over the internet as the It-Drink of the moment. Is it worth the hype? Only one way to find out.
             If you have got instant coffee, sugar, and water on hand, you can make this. It will go by faster if you have a hand mixer, but a humble regular whisk, one powerful arm, and a good dose of patience and endurance will get you there too—just make sure you are ready to feel the burn in your triceps and biceps and you will be rewarded with a nice tall glass of cold, creamy coffee that is sweetened just right. Depending on how much of a caffeine rush you want, this recipe makes enough dalgona fluff for one or two servings. It is delicious but very strong: drink at your own discretion!

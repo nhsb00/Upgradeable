@@ -29,7 +29,7 @@ Upgradeables, a Instructables clone, is an learnable website that users can uplo
   
 ![alt text](https://github.com/nhsb00/Upgradeable/blob/main/app/assets/images/project_creation.gif)
  
- When I published the project, the steps were saving one more time so I had two same steps. To avoid this, I set submitted is true. Once the step was submitted which has id on it, I will update the step. If it is not existed, then step will be created as a new step. 
+ When I published the project, a step was saving twice so I had two same steps in one project. To avoid this, I set "submitted is true" and give a ID. Once the step was submitted including id, it wouldn't save the step as new. If it does not exist, then the step will be created again as a new step.
  
  ```ruby
     handleSubmit(e) {
